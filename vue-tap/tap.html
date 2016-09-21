@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue tap demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+	<script src="./vue-tap.js"></script>
+	<style>
+		#demo { width: 200px; height: 200px; background-color: #ccc;  }
+	</style>
+</head>
+<body>
+	<div id="demo" v-tap="test($event)"></div>
+	<a href="http://www.hitour.cc" v-tap>click here</a>
+
+	<script>
+		new Vue({
+			el: 'body',
+			methods: {
+				test: function(e) {
+					console.log('ok')
+					// var dom = e.currentTarget;
+					// console.log(dom.getBoundingClientRect().width)
+					//console.log(dom.getBoundingClientRect().width)
+				}
+			}
+		})
+	</script>
+</body>
+</html>
